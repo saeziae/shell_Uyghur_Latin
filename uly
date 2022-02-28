@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "$1" | 
+sed "s/نگ/نئگ/g" |
+sed "y/ئاەبپتجچخدرزژسشغفقكگڭلمنھوۇۆۈۋېىي؟،؛/¦aebptj¬xdrz¯s¨´fqkg¸lmnhouöüwëiy?,;/" |
+sed "s/¸/ng/g" |
+sed "s/¬/ch/g" |
+sed "s/¯/zh/g" |
+sed "s/¨/sh/g" |
+sed "s/´/gh/g" |
+sed -E "s/([aeouöüwëi ])¦/\1/g" |
+sed -E "s/^¦//g" |
+sed "s/¦/'/g"
